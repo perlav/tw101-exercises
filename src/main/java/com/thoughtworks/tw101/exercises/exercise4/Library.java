@@ -12,6 +12,15 @@ public class Library {
     }
 
     public String printBooksContaining(String partialBookTitle) {
-        return null;
+        //Print statement added to create clarity in output stream
+        printStream.append("Books Containing: "  + partialBookTitle + "\n");
+
+        for (String bookTitle : books){
+            if (bookTitle.contains(partialBookTitle)){
+                printStream.append(bookTitle + "\n");
+            }
+        }
+        printStream.append("\n");
+        return printStream.toString();
     }
 }
