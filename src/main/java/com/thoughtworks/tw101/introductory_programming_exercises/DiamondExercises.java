@@ -1,5 +1,6 @@
 package com.thoughtworks.tw101.introductory_programming_exercises;
 
+
 public class DiamondExercises {
     public static void main(String[] args) {
         drawAnIsoscelesTriangle(3);
@@ -14,6 +15,23 @@ public class DiamondExercises {
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
 
+        for(int i=1; i<n+1; i++){
+            String output = "";
+            int asterisks = (i-1)*2 +1;
+            int spaces = n-i;
+
+            for(int j=0; j<spaces; j++){
+                output+=" ";
+            }
+            for (int k=0;k<asterisks; k++){
+                output+="*";
+            }
+            for(int l=0; l<spaces; l++ ){
+                output+=" ";
+            }
+            System.out.println(output);
+        }
+
     }
 
 //    Diamond
@@ -24,6 +42,7 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
+
 
     }
 
